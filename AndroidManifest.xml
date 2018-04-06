@@ -184,41 +184,8 @@
                 android:value="status_bar_settings" />
         </activity-alias>
 
-        <!-- Anonymous Statistics -->
-        <receiver android:name=".cmstats.ReportingServiceManager"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ReportingServiceManager">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="org.cyanogenmod.cmparts.action.TRIGGER_REPORT_METRICS" />
-            </intent-filter>
-        </receiver>
-
-        <service android:label="ReportingService"
-            android:enabled="true"
-            android:exported="false"
-            android:name=".cmstats.ReportingService">
-        </service>
-
         <service android:name=".cmstats.StatsUploadJobService"
                  android:permission="android.permission.BIND_JOB_SERVICE" />
-
-        <service android:name=".cmstats.ReportingService"
-                 android:label="ReportingService"
-                 android:enabled="true"
-                 android:exported="false" />
-
-		<!-- Weather settings -->
-        <activity-alias
-            android:name=".weather.WeatherServiceSettings"
-            android:label="@string/weather_settings_title"
-            android:targetActivity="PartsActivity">
-            <intent-filter android:priority="1">
-                <action android:name="cyanogenmod.intent.action.MANAGE_WEATHER_PROVIDER_SERVICES" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity-alias>
 
         <activity android:name=".profiles.NFCProfile">
             <intent-filter>
@@ -233,23 +200,5 @@
             android:label="@string/profile_select"
             android:excludeFromRecents="true"/>
 
-        <activity
-            android:name="inc.lingeage.companion.GenuineActivity"
-            android:theme="@style/GenuineTheme.Dialog" />
-
-        <service android:name="inc.lingeage.companion.GenuineService" />
-
-        <receiver
-            android:name="inc.lingeage.companion.GenuineReceiver"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
     </application>
 </manifest>

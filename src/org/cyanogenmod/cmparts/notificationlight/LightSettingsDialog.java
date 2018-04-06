@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2010 Daniel Nilsson
  * Copyright (C) 2012 The CyanogenMod Project
- *               2017 The LineageOS Project
+ *               2017 The Hellfire Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
